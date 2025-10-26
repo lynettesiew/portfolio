@@ -3,8 +3,15 @@ body {
     background-color: #0f172a;
     background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0h2v20H9V0zm25.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm-20 20l1.732 1-10 17.32-1.732-1 10-17.32zM58.16 4.134l1 1.732-17.32 10-1-1.732 17.32-10zm-40 40l1 1.732-17.32 10-1-1.732 17.32-10zM80 9v2H60V9h20zM20 69v2H0v-2h20zm79.32-55l-1 1.732-17.32-10L82 4l17.32 10zm-80 80l-1 1.732-17.32-10L2 84l17.32 10zm96.546-75.84l-1.732 1-10-17.32 1.732-1 10 17.32zm-100 100l-1.732 1-10-17.32 1.732-1 10 17.32zM38.16 24.134l1 1.732-17.32 10-1-1.732 17.32-10zM60 29v2H40v-2h20zm19.32 5l-1 1.732-17.32-10L62 24l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM111 40h-2V20h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zM40 49v2H20v-2h20zm19.32 5l-1 1.732-17.32-10L42 44l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM91 60h-2V40h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM39.32 74l-1 1.732-17.32-10L22 64l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM71 80h-2V60h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM120 89v2h-20v-2h20zm-84.134 9.16l-1.732 1-10-17.32 1.732-1 10 17.32zM51 100h-2V80h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM100 109v2H80v-2h20zm19.32 5l-1 1.732-17.32-10 1-1.732 17.32 10zM31 120h-2v-20h2v20z' fill='%2394a3b8' fill-opacity='0.11' fill-rule='evenodd'/%3E%3C/svg%3E");
     font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
 }
 
+html {
+    overflow-x:hidden;
+
+}
 
 .hero {
     display: flex;
@@ -35,7 +42,7 @@ body {
 
 .navigation-bar {
     display: flex;
-    align-items: cetner;
+    align-items: center;
     justify-content: flex-end;
     position:sticky;
     top:0;
@@ -43,8 +50,10 @@ body {
     height: 3.5rem;
     background-color: #f916b9;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-    padding-right: 2rem;
     z-index: 1000;
+    width: 100%;
+    left: 0;
+    right:0;
 }
 
 .navigation {
@@ -52,7 +61,8 @@ body {
     list-style:none;
     margin: 0;
     padding: 0;
-    gap: 2rem;
+    padding-right: 2rem;
+    gap: 1rem;
     
 }
 
@@ -61,6 +71,7 @@ body {
     color: white;
     font-weight: bold;
     font-size: 1rem;
+    margin-left: 1rem;
 }
 
 .navigation li a:hover {
@@ -127,20 +138,6 @@ body {
 }
 
 /* Projects Section */
-.projects_heading {
-    position: relative;
-    display: inline-block;
-}
-.projects_heading::before {
-    content: '';
-    position: absolute;
-    width: 8.5rem;
-    height: 1rem;
-    background-color:#f916b9;
-    bottom: 0.5rem;
-    right: 0;
-    z-index: -1;
-}
 
 .section-heading{
     font-family: 'Montserrat', sans-serif;
@@ -154,5 +151,243 @@ body {
 
 .projects {
     text-align: center;
+}
+
+.projects h2 {
+    position: relative;
+    display: inline-block;
+    padding-top: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: aliceblue;
+}
+
+.projects h2::before {
+    content: '';
+    position: absolute;
+    width: 8.5rem;
+    height: 1rem;
+    background-color:#f916b9;
+    bottom: 0.5rem;
+    right: 0;
+    z-index: -1;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+/* project card 1*/
+.project-card {
+    flex: 1 1 300px;
+    max-width: 30%;
+}
+
+
+.project-content {
+    margin-top: 4rem;
+    padding: 1rem;
+    display:flex;
+    flex-direction: column;
+    border: 3px solid #f916b9;
+    border-radius: 10px;
+}
+
+.project-title {
+    color: aliceblue;
+    display:flex;
+    justify-content: center;
+    }
+
+.project-tags{
+    color: aliceblue;
+}
+
+.project-description {
+    color: #d1d5db;
+    margin: 1rem auto;
+    flex-grow: 1;
+    max-width: 350px;
+    align-content: center;
+}
+
+.project-links {
+    display:flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.project-links a:link,
+.project-links a:visited {
+  background-color: #f916b9;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.project-links a:hover, 
+.project-links a:active {
+  background-color: rosybrown;
+}
+
+/*project card 2 */
+.project-card-2 {
+    flex: 1 1 300px;
+    max-width: 30%;
+}
+
+
+.project-content-2 {
+    margin-top: 4rem;
+    padding: 1rem;
+    display:flex;
+    flex-direction: column;
+    border: 3px solid #f916b9;
+    border-radius: 10px;
+}
+
+.project-title-2 {
+    color: aliceblue;
+    display:flex;
+    justify-content: center;
+    }
+
+.project-tags-2{
+    color: aliceblue;
+}
+
+.project-description-2 {
+    color: #d1d5db;
+    margin: 1rem auto;
+    flex-grow: 1;
+    max-width: 350px;
+    align-content: center;
+}
+
+.project-links-2 {
+    display:flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.project-links-2 a:link,
+.project-links-2 a:visited {
+  background-color: #f916b9;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.project-links-2 a:hover, 
+.project-links-2 a:active {
+  background-color: rosybrown;
+}
+
+/* Contact Form Section */
+.form-section {
+    margin-top: 5rem;
+    position:relative;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:aliceblue;
+    min-height: 40vh;
+}
+
+
+.form-section h2 {
+    position: relative;
+    display: inline-block;
+    padding-top: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: aliceblue;
+}
+
+.form-section h2::before {
+    content: '';
+    position: absolute;
+    width: 8.5rem;
+    height: 1rem;
+    background-color:#f916b9;
+    bottom: 0.5rem;
+    right: 0;
+    z-index: -1;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.form label{
+    text-align: left;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  /* Adjust font sizes */
+  .hero h1 { font-size: 2.5rem; }
+  .hero h2 { font-size: 1.2rem; }
+
+  /* Stack projects in 1 column instead of 3 */
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Narrow nav spacing */
+  .navigation {
+    gap: 0.5rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  .hero h1 { font-size: 2rem; }
+  .hero h2 { font-size: 1rem; }
+
+  /* Stack nav vertically (if desired) */
+  .navigation-bar {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  /* Make project cards full-width */
+  .project-card {
+    max-width: 90%;
+  }
+
+  /* Contact form width */
+  .form {
+    max-width: 100%;
+  }
 }
 
